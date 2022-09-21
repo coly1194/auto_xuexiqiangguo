@@ -1445,6 +1445,7 @@ function do_contest() {
         className("android.widget.RadioButton").depth(32).clickable(true).waitFor();
         var img = images.inRange(captureScreen(), "#000000", "#444444");
         img = images.clip(img, pos.left, pos.top, pos.width(), device.height - pos.top);
+        log("高度为："+device.height);
         if (whether_improve_accuracy == "yes") {
             var result = baidu_ocr_api(img);
             var question = result[0];
